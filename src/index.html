@@ -13,91 +13,109 @@
     />
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
-  <body class="container tex">
-    <div>
-      <div>
-        <span></span>
-        <div>
-          <div id="dia">segunda</div>
-          <div id="temperatura">25º</div>
-          <div id="tempo">🌤️</div>
-        </div>
-      </div>
-    </div>
-
+  <body class="container bg-verde-500 text-white">
     <header>
-      <a href="./">
-        <img src="./img/forest.svg" alt="Forest" />
-      </a>
-      <nav id="mobile-menu">
-        <div></div>
-        <ul>
-          <li>
-            <a href="#acomodacoes">Acomodações</a>
-          </li>
-          <li>
-            <a href="#eventos">Eventos</a>
-          </li>
-          <li>
-            <a href="#experiencias">Experiências</a>
-          </li>
-          <li>
-            <a href="#contato">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <section
+        class="flex gap-0.5 my-4 text-verde-100 [&>*]:py-2 [&>*]:px-4 [&>*]:bg-verde-600"
+      >
+        <time
+          class="capitalize rounded-l-md relative before:bg-gradient-to-t from-verde-300 to-verde-100 to-50% before:h-2 before:w-2 before:rounded-full before:shadow-sm before:shadow-verde-100/50 before:absolute before:top-4 before:-left-1"
+          id="dia"
+          >segunda</time
+        >
+        <p id="temperatura">25º</p>
+        <p class="rounded-r-md" id="tempo">🌤️</p>
+      </section>
 
-      <button id="mobile-button">
-        Menu
-        <span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
+      <nav
+        id="menu"
+        class="flex justify-between my-8 max-[360px]:flex-col max-[360px]:justify-items-start max-[360px]:gap-6"
+      >
+        <section class="w-full flex justify-between items-center">
+          <a href="./">
+            <img src="./img/forest.svg" alt="Forest" />
+          </a>
+          <menu
+            class="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-xl [&>*]:relative [&>*]:after:hidden [&>*]:after:w-full [&>*]:after:h-[1px] [&>*]:after:bg-white [&>*]:after:absolute [&>*]:after:-bottom-1 [&>*]:after:left-0"
+          >
+            <li class="hover:after:inline-block">
+              <a href="#acomodacoes">Acomodações</a>
+            </li>
+            <li class="hover:after:inline-block">
+              <a href="#eventos">Eventos</a>
+            </li>
+            <li class="hover:after:inline-block">
+              <a href="#experiencias">Experiências</a>
+            </li>
+            <li class="hover:after:inline-block">
+              <a href="#contato">Contato</a>
+            </li>
+          </menu>
+        </section>
+        <section class="relative">
+          <button
+            id="mobile-button"
+            class="btn flex md:hidden gap-4 justify-between items-center after:w-4 after:h-6 after:bg-[url('../src/img/menu.svg')] after:bg-center after:bg-no-repeat"
+          >
+            Menu
+          </button>
+          <menu
+            class="hidden md:hidden text-md px-5 py-3 bg-gradient-to-b from-verde-200 to-verde-300 text-verde-700 border border-verde-100 border-t-0 shadow-sm shadow-verde-200/50 rounded-b-2xl absolute w-[160px] z-10"
+          >
+            <li class="hover:font-bold hover:text-white">
+              <a href="#acomodacoes">Acomodações</a>
+            </li>
+            <li class="hover:font-bold hover:text-white">
+              <a href="#eventos">Eventos</a>
+            </li>
+            <li class="hover:font-bold hover:text-white">
+              <a href="#experiencias">Experiências</a>
+            </li>
+            <li class="hover:font-bold hover:text-white">
+              <a href="#contato">Contato</a>
+            </li>
+          </menu>
+        </section>
+      </nav>
     </header>
 
-    <main>
-      <div>
-        <!-- <img
-          
-          src="./img/floresta.jpg"
-          alt=""
-        /> -->
-        <!-- autoplay -->
-        <video
-          id="video"
-          muted
-          autoplay
-          playsinline
-          loop
-          width="1280"
-          height="720"
-          src="./img/video_chuva.mp4"
-        ></video>
-        <div>
-          vagas para dezembro abertas
-          <a href="#contato"
-            >Reserve Hoje
-            <img src="./img/seta.svg" alt="" />
-          </a>
-        </div>
-        <h1>Venha Experimentar a Vida na Floresta</h1>
-        <div>
-          <p>
-            Melhores locais para visitar
-            <a href="./">2049</a>
+    <main
+      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10"
+    >
+      <section
+        class="flex gap-6 items-center bg-verde-700 self-start p-1 pl-3 -ml-2 rounded-full"
+      >
+        <p>vagas para dezembro abertas</p>
+        <a
+          href="#contato"
+          class="btn max-w-max flex items-center justify-between relative after:bg-[url('../src/img/seta.svg')] after:bg-center after:bg-no-repeat after:w-6 after:h-6 after:inline-block"
+        >
+          Reserve Hoje
+        </a>
+      </section>
+      <h1 class="font-serif text-5xl font-bold [text-wrap:balance]">
+        Venha Experimentar a Vida na Floresta
+      </h1>
+      <section class="flex gap-6 justify-between items-end">
+        <p>
+          Melhores locais para visitar
+          <a href="./" class="underline underline-offset-4 decoration-2"
+            >2049</a
+          >
+        </p>
+        <section>
+          <p class="uppercase mb-2">Recomendado por</p>
+          <p class="flex items-center gap-3">
+            <img
+              src="./img/parceiros/wildbeast.svg"
+              alt="Wildbeast"
+              class="w-2/5"
+            />
+            <span>|</span>
+            Revista Nacional
           </p>
-          <div>
-            <p>Recomendado por</p>
-            <p>
-              <img src="./img/parceiros/wildbeast.svg" alt="Wildbeast" />
-              <span>|</span>
-              Revista Nacional
-            </p>
-          </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
 
     <!-- acomodacoes -->
@@ -216,7 +234,7 @@
       <div>
         <div>
           <div>
-            <img src="./img/manha.svg" alt="" />
+            <img src="./img/manha.svg" alt />
           </div>
           <h3>Amanhecer</h3>
           <p>
@@ -227,7 +245,7 @@
         </div>
         <div>
           <div>
-            <img src="./img/dia.svg" alt="" />
+            <img src="./img/dia.svg" alt />
           </div>
           <h3>Meio-dia</h3>
           <p>
@@ -238,7 +256,7 @@
         </div>
         <div>
           <div>
-            <img src="./img/noite.svg" alt="" />
+            <img src="./img/noite.svg" alt />
           </div>
           <h3>Anoitecer</h3>
           <p>Termine seu dia com nossa sessão de observação de estrelas.</p>
@@ -275,7 +293,7 @@
           </div>
         </div>
       </div>
-      <form action="">
+      <form action>
         <div>
           <label for="nome">Nome</label>
           <input id="nome" name="nome" type="text" />
@@ -348,6 +366,36 @@
       </div>
     </footer>
 
-    <script></script>
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-button");
+      const mobileMenu = document.querySelector("#mobile-button + menu");
+
+      if (mobileMenuBtn && mobileMenu) {
+        const classesToToggle = {
+          mobileMenuBtn: [
+            "w-[160px]",
+            "border-b-0",
+            "rounded-b-none",
+            "rounded-t-2xl",
+            "font-bold",
+            "text-lg/(1)",
+          ],
+        };
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          mobileMenu.classList.toggle("flex");
+          mobileMenu.classList.toggle("flex-col");
+          mobileMenu.classList.toggle("gap-3");
+
+          mobileMenuBtn.classList.toggle("btn-active");
+          mobileMenuBtn.classList.toggle("btn");
+
+          classesToToggle.mobileMenuBtn.forEach((cls) =>
+            mobileMenuBtn.classList.toggle(cls)
+          );
+        });
+      }
+    </script>
   </body>
 </html>
