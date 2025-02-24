@@ -1,11 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
+/* @layer utilities {
   text-balance: {
     @apply;
   }
+} */
+
+@theme {
+  --breakpoint-xs: 440px;
 }
 
 @layer components {
@@ -14,5 +19,30 @@
   }
   .btn-active {
     @apply py-1 px-5 rounded-full  bg-gradient-to-t border border-verde-100 shadow-sm shadow-verde-200/50 from-verde-200 to-verde-100 text-verde-600 hover:text-verde-400;
+  }
+}
+
+:root {
+  font-size: 16px;
+}
+
+@media (min-width: 1280px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    font-size: 14px;
   }
 }

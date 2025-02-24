@@ -13,7 +13,7 @@
     />
     <link href="../dist/output.css" rel="stylesheet" />
   </head>
-  <body class="container bg-verde-500 text-white">
+  <body class="container max-w-[1350px] bg-verde-500 text-white">
     <header>
       <section
         class="flex gap-0.5 my-4 text-verde-100 [&>*]:py-2 [&>*]:px-4 [&>*]:bg-verde-600"
@@ -80,12 +80,12 @@
     </header>
 
     <main
-      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10"
+      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-28 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10 max-w-[1200px] mx-auto"
     >
       <section
-        class="flex gap-6 items-center bg-verde-700 self-start p-1 pl-3 -ml-2 rounded-full"
+        class="flex gap-6 items-center bg-verde-700 self-start p-1 pl-3 -ml-2 rounded-full max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-2 max-[500px]:rounded-2xl max-[500px]:bg-transparent"
       >
-        <p>vagas para dezembro abertas</p>
+        <p class="max-[500px]:font-bold">vagas para dezembro abertas</p>
         <a
           href="#contato"
           class="btn max-w-max flex items-center justify-between relative after:bg-[url('../src/img/seta.svg')] after:bg-center after:bg-no-repeat after:w-6 after:h-6 after:inline-block"
@@ -93,23 +93,27 @@
           Reserve Hoje
         </a>
       </section>
-      <h1 class="font-serif text-5xl font-bold [text-wrap:balance]">
+      <h1
+        class="font-serif text-5xl font-bold w-full [390px]:max-w-md max-[500px]:text-3xl max-[390px]:text-xl"
+      >
         Venha Experimentar a Vida na Floresta
       </h1>
-      <section class="flex gap-6 justify-between items-end">
+      <section
+        class="flex gap-2 md:gap-6 md:justify-between items-end max-md:flex-col w-full"
+      >
         <p>
           Melhores locais para visitar
           <a href="./" class="underline underline-offset-4 decoration-2"
             >2049</a
           >
         </p>
-        <section>
-          <p class="uppercase mb-2">Recomendado por</p>
-          <p class="flex items-center gap-3">
+        <section class="">
+          <p class="uppercase text-end mb-0.5 md:mb-2">Recomendado por</p>
+          <p class="flex justify-end gap-2 md:gap-3 sm:w-max">
             <img
               src="./img/parceiros/wildbeast.svg"
               alt="Wildbeast"
-              class="w-2/5"
+              class="w-2/5 object-contain"
             />
             <span>|</span>
             Revista Nacional
