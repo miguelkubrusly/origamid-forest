@@ -25,7 +25,7 @@
     @apply absolute bg-verde-700/50 py-1.5 px-3 uppercase rounded-full top-2 right-2;
   }
   .subtitle {
-    @apply uppercase text-verde-100;
+    @apply uppercase text-verde-100 tracking-wider;
   }
 }
 

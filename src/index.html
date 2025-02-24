@@ -80,7 +80,7 @@
     </header>
 
     <main
-      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-28 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10 max-w-[1200px] mx-auto max-[400px]:pl-6 mx-3"
+      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-28 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10 max-[400px]:pl-6 mx-3"
     >
       <section
         class="flex gap-6 items-center bg-verde-700/90 self-start p-1 pl-3 -ml-2 rounded-full max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-2 max-[500px]:rounded-3xl max-[500px]:rounded-b-6xl max-[500px]:bg-verde-700/80 max-[500px]:py-2 max-[500px]:px-4"
@@ -97,7 +97,7 @@
         Venha Experimentar a Vida na Floresta
       </h1>
       <section
-        class="flex gap-2 md:gap-6 md:justify-between items-end max-md:flex-col w-full"
+        class="flex gap-2 md:gap-6 md:justify-between items-end max-md:flex-col w-full text-end"
       >
         <p>
           Melhores locais para visitar
@@ -116,7 +116,7 @@
               class="w-2/5 object-contain justify-self-end"
             />
             <span>|</span>
-            Revista Nacional
+            <span class="min-w-max">Revista Nacional</span>
           </p>
         </section>
       </section>
@@ -132,20 +132,24 @@
       >
         <h1 class="title mb-6">Refúgio Natural</h1>
         <ul
-          class="flex flex-col gap-4 mb-6 [&>*]:flex [&>*]:items-center [&>*]:gap-2 [&>*]:before:inline-block [&>*]:before:w-6 [&>*]:before:h-1 [&>*]:before:neon"
+          class="flex flex-col gap-4 mb-8 [&>*]:flex [&>*]:items-center [&>*]:gap-2 [&>*]:before:inline-block [&>*]:before:w-6 [&>*]:before:h-0.5 [&>*]:before:rounded-full [&>*]:before:neon"
         >
-          <li><span></span>Experimente a natureza de perto</li>
-          <li><span></span>Conecte-se com a natureza</li>
-          <li><span></span>Desconecte-se do digital</li>
-          <li><span></span>Observe a vida selvagem</li>
-          <li><span></span>Escolha a sua cabine preferida</li>
+          <li>Experimente a natureza de perto</li>
+          <li>Conecte-se com a natureza</li>
+          <li>Desconecte-se do digital</li>
+          <li>Observe a vida selvagem</li>
+          <li>Escolha a sua cabine preferida</li>
         </ul>
       </section>
       <section
-        class="grid grid-cols-2 gap-3 pb-12 [&>figure]:relative [&>figure>img]:rounded-xl [&>figure>figcaption]:img-caption bg-gradient-to-b from-verde-500/0 to-verde-500"
+        class="grid grid-cols-2 gap-4 pb-12 [&>figure]:relative [&>figure>img]:rounded-xl [&>figure>figcaption]:img-caption bg-gradient-to-b from-verde-500/0 to-verde-500"
       >
         <figure class="col-span-2">
-          <img src="./img/casa1.jpg" alt="Casa 1" />
+          <img
+            src="./img/casa1.jpg"
+            alt="Casa 1"
+            class="max-h-[600px] w-full object-cover object-center"
+          />
           <figcaption>Ruby</figcaption>
         </figure>
         <figure>
@@ -160,20 +164,18 @@
     </section>
 
     <!-- eventos -->
-    <section id="eventos" class="bg-verde-600 px-3 py-12">
-      <p class="subtitle text-center">Conecte-se com a natureza</p>
-      <h2 class="title text-center py-4">
+    <section id="eventos" class="bg-verde-600 px-3 py-12 mb-12">
+      <h2 class="subtitle text-center">Conecte-se com a natureza</h2>
+      <h1 class="title text-center py-4">
         Cada Som, Cada Momento, Uma Nova Descoberta
-      </h2>
-      <section
-        class="flex sm:grid sm:grid-cols-2 overflow-x-auto gap-8 max-w-5xl mx-auto"
-      >
+      </h1>
+      <section class="flex overflow-x-auto gap-8 max-w-5xl mx-auto pb-4">
         <section
-          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+          class="min-w-[260px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
         >
-          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+          <h3 class="font-serif font-semibold text-2xl text-verde-200">
             Lua Nova
-          </h2>
+          </h3>
           <time class="text-white text-xl mb-1" datetime="2049-03-23">
             <span class="text-white block font-serif text-5xl font-medium"
               >23</span
@@ -189,11 +191,11 @@
           <button class="btn">Reservar 23/03</button>
         </section>
         <section
-          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+          class="min-w-[260px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
         >
-          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+          <h3 class="font-serif font-semibold text-2xl text-verde-200">
             Aurora Boreal
-          </h2>
+          </h3>
           <time class="text-white text-xl mb-1" datetime="2049-04-15">
             <span class="text-white block font-serif text-5xl font-medium"
               >15</span
@@ -209,58 +211,74 @@
           <button class="btn">Reservar 15/04</button>
         </section>
         <section
-          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+          class="min-w-[260px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
         >
-          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+          <h3 class="font-serif font-semibold text-2xl text-verde-200">
             Chuva de Meteoros
-          </h2>
-          <time class="text-white text-xl mb-1" datetime="2049-03-23">
+          </h3>
+          <time class="text-white text-xl mb-1" datetime="2049-08-18">
             <span class="text-white block font-serif text-5xl font-medium"
-              >23</span
+              >18</span
             >
 
-            Março 2049</time
+            Agosto 2049</time
           >
 
           <p class="[text-wrap:text-balance] max-w-md">
-            Melhor período para observação astronômica. O Céu estará claro e as
-            estrelas visíveis.
+            Melhor período para observação da Chuva de Meteoros, o céu estará
+            iluminado pelas estrelas.
           </p>
-          <button class="btn">Reservar 15/04</button>
+          <button class="btn">Reservar 18/08</button>
         </section>
       </section>
     </section>
 
     <!-- experiencias -->
-    <section id="experiencias">
-      <div>
-        <p>Experiências Exclusivas</p>
-        <h2>Escolha sua próxima aventura</h2>
-        <h3>Observação Noturna</h3>
-        <p>Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
-        <h3>Vida Selvagem</h3>
-        <p>Observe a vida selvagem em seu habitat natural.</p>
-        <h3>Canoagem</h3>
-        <p>Conquiste novos horizontes com nossa equipe especializada.</p>
-      </div>
+    <section id="experiencias" class="mx-3">
+      <section class="bg-verde-600 p-6 rounded-xl mb-6">
+        <h2 class="subtitle">Experiências Exclusivas</h2>
+        <h1 class="title mt-4 mb-8">Escolha sua próxima aventura</h1>
+        <ul
+          class="flex flex-col gap-6 mb-6 [&>*]:before:inline-block [&>*]:before:w-6 [&>*]:before:h-0.5 [&>*]:before:rounded-full [&>*]:before:neon [&>*]:before:self-center [&>*]:before:justify-self-end [&>*]:before:transition-all [&>*]:mr-8"
+        >
+          <li
+            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+          >
+            <h3 class="col-start-2 text-xl">Observação Noturna</h3>
+            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+              Explore a vida sob as estrelas.
+            </p>
+          </li>
+          <li
+            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+          >
+            <h3 class="col-start-2 text-xl">Vida Selvagem</h3>
+            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+              Observe a vida selvagem em seu habitat natural.
+            </p>
+          </li>
+          <li
+            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+          >
+            <h3 class="col-start-2 text-xl">Canoagem</h3>
+            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+              Conquiste novos horizontes com nossa equipe especializada.
+            </p>
+          </li>
+        </ul>
+      </section>
       <div>
         <div>
           <img src="./img/canoagem.jpg" alt="canoagem" />
-          <div>
-            <span>Canoagem</span>
-          </div>
+          <span>Canoagem</span>
         </div>
         <div>
           <img src="./img/observacao-noturna.jpg" alt="Observação Noturna" />
-          <div>
-            <span>Observação Noturna</span>
-          </div>
+          <span>Observação Noturna</span>
         </div>
         <div>
           <img src="./img/vida-selvagem.jpg" alt="Vida Selvagem" />
-          <div>
-            <span>Vida Selvagem</span>
-          </div>
+          <span>Vida Selvagem</span>
         </div>
       </div>
     </section>
