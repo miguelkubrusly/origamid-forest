@@ -16,10 +16,10 @@
   <body class="container max-w-[1350px] bg-verde-500 text-white">
     <header>
       <section
-        class="flex gap-0.5 my-4 text-verde-100 [&>*]:py-2 [&>*]:px-4 [&>*]:bg-verde-600"
+        class="flex gap-0.5 my-4 text-verde-100 px-3 [&>*]:py-2 [&>*]:px-4 [&>*]:bg-verde-600"
       >
         <time
-          class="capitalize rounded-l-md relative before:bg-gradient-to-t from-verde-300 to-verde-100 to-50% before:h-2 before:w-2 before:rounded-full before:shadow-sm before:shadow-verde-100/50 before:absolute before:top-4 before:-left-1"
+          class="capitalize rounded-l-md relative before:neon before:h-2 before:w-2 before:rounded-full before:absolute before:top-4 before:-left-1"
           id="dia"
           >segunda</time
         >
@@ -29,7 +29,7 @@
 
       <nav
         id="menu"
-        class="flex justify-between my-8 max-[360px]:flex-col max-[360px]:justify-items-start max-[360px]:gap-6"
+        class="flex justify-between my-8 max-[360px]:flex-col max-[360px]:justify-items-start max-[360px]:gap-6 px-3"
       >
         <section class="w-full flex justify-between items-center">
           <a href="./">
@@ -80,10 +80,10 @@
     </header>
 
     <main
-      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-28 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10 max-w-[1200px] mx-auto"
+      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-28 md:pt-72 gap-8 -z-20 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl before:-z-10 max-w-[1200px] mx-auto max-[400px]:pl-6 mx-3"
     >
       <section
-        class="flex gap-6 items-center bg-verde-700 self-start p-1 pl-3 -ml-2 rounded-full max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-2 max-[500px]:rounded-2xl max-[500px]:bg-transparent"
+        class="flex gap-6 items-center bg-verde-700/90 self-start p-1 pl-3 -ml-2 rounded-full max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-2 max-[500px]:rounded-3xl max-[500px]:rounded-b-6xl max-[500px]:bg-verde-700/80 max-[500px]:py-2 max-[500px]:px-4"
       >
         <p class="max-[500px]:font-bold">vagas para dezembro abertas</p>
         <a
@@ -93,9 +93,7 @@
           Reserve Hoje
         </a>
       </section>
-      <h1
-        class="font-serif text-5xl font-bold w-full [390px]:max-w-md max-[500px]:text-3xl max-[390px]:text-xl"
-      >
+      <h1 class="title sm:w-full [390px]:max-w-md">
         Venha Experimentar a Vida na Floresta
       </h1>
       <section
@@ -109,11 +107,13 @@
         </p>
         <section class="">
           <p class="uppercase text-end mb-0.5 md:mb-2">Recomendado por</p>
-          <p class="flex justify-end gap-2 md:gap-3 sm:w-max">
+          <p
+            class="flex justify-end w-full max-sm:items-center gap-2 md:gap-3 sm:w-max"
+          >
             <img
               src="./img/parceiros/wildbeast.svg"
               alt="Wildbeast"
-              class="w-2/5 object-contain"
+              class="w-2/5 object-contain justify-self-end"
             />
             <span>|</span>
             Revista Nacional
@@ -123,77 +123,112 @@
     </main>
 
     <!-- acomodacoes -->
-    <section id="acomodacoes">
-      <div>
-        <h2>Refúgio Natural</h2>
-        <ul>
+    <section
+      id="acomodacoes"
+      class="bg-gradient-to-r from-verde-500 via-verde-400 to-verde-500 pt-12 mx-3"
+    >
+      <section
+        class="bg-[url(../src/img/padrao.svg)] bg-left bg-contain bg-no-repeat"
+      >
+        <h1 class="title mb-6">Refúgio Natural</h1>
+        <ul
+          class="flex flex-col gap-4 mb-6 [&>*]:flex [&>*]:items-center [&>*]:gap-2 [&>*]:before:inline-block [&>*]:before:w-6 [&>*]:before:h-1 [&>*]:before:neon"
+        >
           <li><span></span>Experimente a natureza de perto</li>
           <li><span></span>Conecte-se com a natureza</li>
           <li><span></span>Desconecte-se do digital</li>
           <li><span></span>Observe a vida selvagem</li>
           <li><span></span>Escolha a sua cabine preferida</li>
         </ul>
-      </div>
-      <div>
-        <div>
+      </section>
+      <section
+        class="grid grid-cols-2 gap-3 pb-12 [&>figure]:relative [&>figure>img]:rounded-xl [&>figure>figcaption]:img-caption bg-gradient-to-b from-verde-500/0 to-verde-500"
+      >
+        <figure class="col-span-2">
           <img src="./img/casa1.jpg" alt="Casa 1" />
-          <span>Ruby</span>
-        </div>
-        <div>
+          <figcaption>Ruby</figcaption>
+        </figure>
+        <figure>
           <img src="./img/casa2.jpg" alt="Casa 2" />
-          <span>Emerald</span>
-        </div>
-        <div>
+          <figcaption>Emerald</figcaption>
+        </figure>
+        <figure>
           <img src="./img/casa3.jpg" alt="Casa 3" />
-          <span>Saphire</span>
-        </div>
-      </div>
+          <figcaption>Saphire</figcaption>
+        </figure>
+      </section>
     </section>
 
     <!-- eventos -->
-    <section id="eventos">
-      <div>
-        <p>Conecte-se com a natureza</p>
-        <h2>Cada Som, Cada Momento, Uma Nova Descoberta</h2>
-        <div>
-          <div>
-            <h3>Lua Nova</h3>
-            <div>
-              <p>23</p>
-              <p>Março 2049</p>
-            </div>
-            <p>
-              Melhor período para observação astronômica. O Céu estará claro e
-              as estrelas visíveis.
-            </p>
-            <a href="#contato">Reservar 23/03</a>
-          </div>
-          <div>
-            <h3>Aurora Boreal</h3>
-            <div>
-              <p>15</p>
-              <p>Abril 2049</p>
-            </div>
-            <p>
-              Melhor período para observação da Aurora Boreal, o céu estará
-              iluminado pelas estrelas.
-            </p>
-            <a href="#contato">Reservar 15/04</a>
-          </div>
-          <div>
-            <h3>Chuva de Meteoros</h3>
-            <div>
-              <p>18</p>
-              <p>Agosto 2049</p>
-            </div>
-            <p>
-              Melhor período para observação da Chuva de Meteoros, o céu estará
-              iluminado pelas estrelas.
-            </p>
-            <a href="#contato">Reservar 18/08</a>
-          </div>
-        </div>
-      </div>
+    <section id="eventos" class="bg-verde-600 px-3 py-12">
+      <p class="subtitle text-center">Conecte-se com a natureza</p>
+      <h2 class="title text-center py-4">
+        Cada Som, Cada Momento, Uma Nova Descoberta
+      </h2>
+      <section
+        class="flex sm:grid sm:grid-cols-2 overflow-x-auto gap-8 max-w-5xl mx-auto"
+      >
+        <section
+          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+        >
+          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+            Lua Nova
+          </h2>
+          <time class="text-white text-xl mb-1" datetime="2049-03-23">
+            <span class="text-white block font-serif text-5xl font-medium"
+              >23</span
+            >
+
+            Março 2049</time
+          >
+
+          <p class="[text-wrap:text-balance] max-w-md">
+            Melhor período para observação astronômica. O Céu estará claro e as
+            estrelas visíveis.
+          </p>
+          <button class="btn">Reservar 23/03</button>
+        </section>
+        <section
+          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+        >
+          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+            Aurora Boreal
+          </h2>
+          <time class="text-white text-xl mb-1" datetime="2049-04-15">
+            <span class="text-white block font-serif text-5xl font-medium"
+              >15</span
+            >
+
+            Abril 2049</time
+          >
+
+          <p class="[text-wrap:text-balance] max-w-md">
+            Melhor período para observação da Aurora Boreal, o céu estará
+            iluminado pelas estrelas.
+          </p>
+          <button class="btn">Reservar 15/04</button>
+        </section>
+        <section
+          class="min-w-[250px] bg-verde-500 p-6 rounded-xl flex flex-col justify-between gap-4"
+        >
+          <h2 class="font-serif font-semibold text-2xl text-verde-200">
+            Chuva de Meteoros
+          </h2>
+          <time class="text-white text-xl mb-1" datetime="2049-03-23">
+            <span class="text-white block font-serif text-5xl font-medium"
+              >23</span
+            >
+
+            Março 2049</time
+          >
+
+          <p class="[text-wrap:text-balance] max-w-md">
+            Melhor período para observação astronômica. O Céu estará claro e as
+            estrelas visíveis.
+          </p>
+          <button class="btn">Reservar 15/04</button>
+        </section>
+      </section>
     </section>
 
     <!-- experiencias -->
