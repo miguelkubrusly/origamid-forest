@@ -598,6 +598,7 @@ video {
 }
 
 .btn:hover {
+  cursor: pointer;
   --tw-contrast: contrast(2);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -676,6 +677,10 @@ video {
   z-index: 10;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -697,11 +702,6 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .my-8 {
@@ -729,6 +729,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -741,8 +745,20 @@ video {
   margin-top: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1097,8 +1113,8 @@ video {
   padding-top: 3rem;
 }
 
-.pt-28 {
-  padding-top: 7rem;
+.pt-14 {
+  padding-top: 3.5rem;
 }
 
 .text-center {
@@ -1332,6 +1348,11 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.after\:pointer-events-none::after {
+  content: var(--tw-content);
+  pointer-events: none;
+}
+
 .after\:inline-block::after {
   content: var(--tw-content);
   display: inline-block;
@@ -1416,12 +1437,20 @@ video {
     gap: 0.5rem;
   }
 
-  .max-\[500px\]\:rounded-3xl {
-    border-radius: 1.5rem;
+  .max-\[500px\]\:rounded-xl {
+    border-radius: 0.75rem;
   }
 
-  .max-\[500px\]\:bg-verde-700\/80 {
-    background-color: rgb(3 5 4 / 0.8);
+  .max-\[500px\]\:rounded-2xl {
+    border-radius: 1rem;
+  }
+
+  .max-\[500px\]\:bg-verde-700\/70 {
+    background-color: rgb(3 5 4 / 0.7);
+  }
+
+  .max-\[500px\]\:bg-verde-700\/60 {
+    background-color: rgb(3 5 4 / 0.6);
   }
 
   .max-\[500px\]\:px-4 {
@@ -1437,6 +1466,10 @@ video {
   .max-\[500px\]\:font-bold {
     font-weight: 700;
   }
+
+  .max-\[500px\]\:font-semibold {
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1446,16 +1479,14 @@ video {
 }
 
 @media (max-width: 360px) {
-  .max-\[360px\]\:flex-col {
-    flex-direction: column;
-  }
-
-  .max-\[360px\]\:justify-items-start {
-    justify-items: start;
-  }
-
   .max-\[360px\]\:gap-6 {
     gap: 1.5rem;
+  }
+}
+
+@media (min-width: 390px) {
+  .min-\[390px\]\:max-w-\[50\%\] {
+    max-width: 50%;
   }
 }
 
@@ -1495,8 +1526,8 @@ video {
     gap: 1.5rem;
   }
 
-  .md\:pt-72 {
-    padding-top: 18rem;
+  .md\:pt-56 {
+    padding-top: 14rem;
   }
 }
 
