@@ -16,10 +16,10 @@
     @apply py-1 px-5 rounded-full  bg-gradient-to-t border border-verde-100 shadow-sm shadow-verde-200/50 from-verde-200 to-verde-100 text-verde-600 hover:text-verde-400 min-w-max;
   }
   .title {
-    @apply font-serif text-4xl font-semibold max-[500px]:text-4xl max-[390px]:text-3xl;
+    @apply font-serif text-5xl font-semibold max-[500px]:text-4xl max-[390px]:text-3xl;
   }
   .neon {
-    @apply bg-gradient-to-t from-verde-300 to-verde-100 to-50% shadow-verde-100/50 shadow-sm;
+    @apply bg-gradient-to-t from-verde-300 to-verde-100 to-50% shadow-verde-100/30 shadow-md;
   }
   .img-caption {
     @apply absolute bg-verde-700/50 py-1.5 px-3 uppercase rounded-full top-2 right-2;
