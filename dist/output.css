@@ -661,6 +661,10 @@ video {
   color: rgb(172 239 117 / var(--tw-text-opacity));
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -681,12 +685,24 @@ video {
   z-index: 50;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
 
 .col-start-2 {
   grid-column-start: 2;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-full {
+  grid-row: 1 / -1;
 }
 
 .mx-3 {
@@ -815,12 +831,28 @@ video {
   max-width: 28rem;
 }
 
+.origin-center {
+  transform-origin: center;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-\[auto_auto\] {
   grid-template-columns: auto auto;
+}
+
+.grid-cols-\[auto_1fr\] {
+  grid-template-columns: auto 1fr;
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -898,6 +930,10 @@ video {
 
 .justify-self-end {
   justify-self: end;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-x-auto {
@@ -1117,6 +1153,10 @@ video {
   padding-top: 3.5rem;
 }
 
+.pl-9 {
+  padding-left: 2.25rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1215,6 +1255,24 @@ video {
 .shadow-verde-200\/50 {
   --tw-shadow-color: rgb(145 238 119 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
 }
 
 .\[text-wrap\:text-balance\] {
@@ -1318,9 +1376,19 @@ video {
   top: 1rem;
 }
 
+.before\:top-0::before {
+  content: var(--tw-content);
+  top: 0px;
+}
+
 .before\:-z-10::before {
   content: var(--tw-content);
   z-index: -10;
+}
+
+.before\:block::before {
+  content: var(--tw-content);
+  display: block;
 }
 
 .before\:h-2::before {
@@ -1328,9 +1396,19 @@ video {
   height: 0.5rem;
 }
 
+.before\:h-6::before {
+  content: var(--tw-content);
+  height: 1.5rem;
+}
+
 .before\:w-2::before {
   content: var(--tw-content);
   width: 0.5rem;
+}
+
+.before\:w-6::before {
+  content: var(--tw-content);
+  width: 1.5rem;
 }
 
 .before\:rounded-full::before {
@@ -1341,6 +1419,11 @@ video {
 .before\:rounded-xl::before {
   content: var(--tw-content);
   border-radius: 0.75rem;
+}
+
+.before\:bg-black\/50::before {
+  content: var(--tw-content);
+  background-color: rgb(0 0 0 / 0.5);
 }
 
 .before\:bg-gradient-to-t::before {
@@ -1393,6 +1476,22 @@ video {
   background-repeat: no-repeat;
 }
 
+.hover\:block:hover {
+  display: block;
+}
+
+.hover\:inline-block:hover {
+  display: inline-block;
+}
+
+.hover\:inline:hover {
+  display: inline;
+}
+
+.hover\:hidden:hover {
+  display: none;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -1402,14 +1501,71 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:before\:absolute:hover::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.hover\:before\:inset-0:hover::before {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
 .before\:hover\:w-10:hover::before {
   content: var(--tw-content);
   width: 2.5rem;
 }
 
+.hover\:before\:rounded-xl:hover::before {
+  content: var(--tw-content);
+  border-radius: 0.75rem;
+}
+
+.hover\:before\:bg-gradient-to-t:hover::before {
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.hover\:before\:from-verde-700\/70:hover::before {
+  content: var(--tw-content);
+  --tw-gradient-from: rgb(3 5 4 / 0.7) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(3 5 4 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:before\:to-verde-700\/0:hover::before {
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(3 5 4 / 0) var(--tw-gradient-to-position);
+}
+
 .hover\:after\:inline-block:hover::after {
   content: var(--tw-content);
   display: inline-block;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.group:hover .group-hover\:inline {
+  display: inline;
+}
+
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:before\:bg-gradient-to-t::before {
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
 @media not all and (min-width: 768px) {
@@ -1650,10 +1806,109 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.\[\&\>figure\>figcaption\]\:absolute>figure>figcaption {
+  position: absolute;
+}
+
+.\[\&\>figure\>figcaption\]\:bottom-0>figure>figcaption {
+  bottom: 0px;
+}
+
+.\[\&\>figure\>figcaption\]\:bottom-2>figure>figcaption {
+  bottom: 0.5rem;
+}
+
+.\[\&\>figure\>figcaption\]\:bottom-4>figure>figcaption {
+  bottom: 1rem;
+}
+
+.\[\&\>figure\>figcaption\]\:left-2>figure>figcaption {
+  left: 0.5rem;
+}
+
+.\[\&\>figure\>figcaption\]\:left-4>figure>figcaption {
+  left: 1rem;
+}
+
+.\[\&\>figure\>figcaption\]\:hidden>figure>figcaption {
+  display: none;
+}
+
+.\[\&\>figure\>figcaption\]\:text-xl>figure>figcaption {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>figure\>figcaption\]\:text-lg>figure>figcaption {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>figure\>img\]\:h-full>figure>img {
+  height: 100%;
+}
+
 .\[\&\>figure\>img\]\:rounded-xl>figure>img {
+  border-radius: 0.75rem;
+}
+
+.\[\&\>figure\>img\]\:before\:absolute>figure>img::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.\[\&\>figure\>img\]\:before\:inset-0>figure>img::before {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+.\[\&\>figure\>img\]\:before\:rounded-xl>figure>img::before {
+  content: var(--tw-content);
   border-radius: 0.75rem;
 }
 
 .\[\&\>figure\]\:relative>figure {
   position: relative;
+}
+
+.\[\&\>figure\]\:rounded-xl>figure {
+  border-radius: 0.75rem;
+}
+
+.\[\&\>figure\]\:before\:absolute>figure::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.\[\&\>figure\]\:before\:inset-0>figure::before {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+.\[\&\>figure\]\:before\:-z-10>figure::before {
+  content: var(--tw-content);
+  z-index: -10;
+}
+
+.\[\&\>figure\]\:before\:rounded-xl>figure::before {
+  content: var(--tw-content);
+  border-radius: 0.75rem;
+}
+
+.\[\&\>figure\]\:before\:bg-gradient-to-t>figure::before {
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.\[\&\>figure\]\:hover\:before\:bg-gradient-to-t:hover>figure::before {
+  content: var(--tw-content);
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.\[\&\>p\]\:hover\:fixed:hover>p {
+  position: fixed;
+}
+
+.\[\&\>p\]\:hover\:-ml-4:hover>p {
+  margin-left: -1rem;
 }

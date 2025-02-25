@@ -239,45 +239,65 @@
           class="flex flex-col gap-6 mb-6 [&>*]:before:inline-block [&>*]:before:w-6 [&>*]:before:h-0.5 [&>*]:before:rounded-full [&>*]:before:neon [&>*]:before:self-center [&>*]:before:justify-self-end [&>*]:before:transition-all [&>*]:mr-8"
         >
           <li
-            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+            class="grid grid-cols-[auto_1fr] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
           >
             <h3 class="col-start-2 text-xl">Observação Noturna</h3>
-            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+            <p class="col-span-2 pl-9 text-gray-400 [text-wrap:text-balance]">
               Explore a vida sob as estrelas.
             </p>
           </li>
           <li
-            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+            class="grid grid-cols-[auto_1fr] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
           >
             <h3 class="col-start-2 text-xl">Vida Selvagem</h3>
-            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+            <p class="col-span-2 pl-9 text-gray-400 [text-wrap:text-balance]">
               Observe a vida selvagem em seu habitat natural.
             </p>
           </li>
           <li
-            class="grid grid-cols-[auto_auto] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
+            class="grid grid-cols-[auto_1fr] gap-y-0.5 gap-x-3 justify-items-start before:hover:w-10"
           >
             <h3 class="col-start-2 text-xl">Canoagem</h3>
-            <p class="col-start-2 text-gray-400 [text-wrap:text-balance]">
+            <p class="col-span-2 pl-9 text-gray-400 [text-wrap:text-balance]">
               Conquiste novos horizontes com nossa equipe especializada.
             </p>
           </li>
         </ul>
       </section>
-      <div>
-        <div>
-          <img src="./img/canoagem.jpg" alt="canoagem" />
-          <span>Canoagem</span>
-        </div>
-        <div>
-          <img src="./img/observacao-noturna.jpg" alt="Observação Noturna" />
-          <span>Observação Noturna</span>
-        </div>
-        <div>
-          <img src="./img/vida-selvagem.jpg" alt="Vida Selvagem" />
-          <span>Vida Selvagem</span>
-        </div>
-      </div>
+      <section
+        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:relative [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>figcaption]:absolute [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
+      >
+        <figure class="group overflow-hidden">
+          <img
+            src="./img/canoagem.jpg"
+            alt="canoagem"
+            class="transition-transform duration-150 group-hover:scale-110"
+          />
+          <figcaption class="hidden group-hover:block">Canoagem</figcaption>
+        </figure>
+
+        <figure class="group overflow-hidden row-span-2">
+          <img
+            src="./img/observacao-noturna.jpg"
+            alt="Observação Noturna"
+            class="transition-transform duration-150 group-hover:scale-110"
+          />
+          <figcaption class="hidden group-hover:block">
+            Observação Noturna
+          </figcaption>
+        </figure>
+
+        <figure class="group overflow-hidden">
+          <img
+            src="./img/vida-selvagem.jpg"
+            alt="Vida Selvagem"
+            class="transition-transform duration-150 group-hover:scale-110"
+          />
+          <figcaption class="hidden group-hover:block">
+            Vida Selvagem
+          </figcaption>
+        </figure>
+      </section>
     </section>
 
     <!-- ciclo natural -->
