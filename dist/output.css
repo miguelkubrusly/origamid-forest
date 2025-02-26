@@ -1344,7 +1344,7 @@ video {
   transition-duration: 150ms;
 }
 
-.bg-radial-verde-90 {
+.bg-radial-verde-80 {
   background-image: radial-gradient(#2e482c, #16281f 80%);
 }
 
@@ -1883,6 +1883,10 @@ video {
 
   .md\:pt-56 {
     padding-top: 14rem;
+  }
+
+  .md\:bg-radial-verde-70 {
+    background-image: radial-gradient(#2e482c, #16281f 70%);
   }
 }
 
