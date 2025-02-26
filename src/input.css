@@ -19,7 +19,11 @@
     @apply font-serif text-5xl font-semibold max-[500px]:text-4xl max-[390px]:text-3xl;
   }
   .neon {
-    @apply bg-gradient-to-t from-verde-300 to-verde-100 to-50% shadow-verde-100/30 shadow-md;
+    @apply bg-gradient-to-t from-verde-300 to-verde-100 to-50% border-[2px] border-verde-100 shadow-verde-100/70 shadow-[0px_0px_1px_1px];
+  }
+  .neon-before {
+    @apply before:bg-gradient-to-t before:from-verde-300 before:to-verde-100 before:to-10% before:border-[0.5px] before:border-verde-100
+    before:shadow-verde-100/70 before:shadow-[0px_0px_1px_1px];
   }
   .img-caption {
     @apply absolute bg-verde-700/50 py-1.5 px-3 uppercase rounded-full top-2 right-2;

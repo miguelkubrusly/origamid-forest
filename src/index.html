@@ -19,7 +19,7 @@
         class="flex gap-0.5 my-4 text-verde-100 px-3 [&>*]:py-2 [&>*]:px-4 [&>*]:bg-verde-600"
       >
         <time
-          class="capitalize rounded-l-md relative before:neon before:h-2 before:w-2 before:rounded-full before:absolute before:top-4 before:-left-1"
+          class="capitalize rounded-l-md relative neon-before before:h-2 before:w-2 before:rounded-full before:absolute before:top-4 before:-left-1"
           id="dia"
           >segunda</time
         >
@@ -390,7 +390,7 @@
     </section>
 
     <!-- contato -->
-    <article id="contato" class="mx-3">
+    <article id="contato" class="mx-3 mb-12">
       <address class="not-italic text-gray-200">
         <h1 class="title text-verde-200 text-4xl mb-6">Nossos Contatos</h1>
         <p>
@@ -399,42 +399,61 @@
         </p>
         <ul class="mt-8 flex flex-col gap-4">
           <li
-            class="flex flex-col gap-4 before:block before:w-6 before:h-0.5 before:neon"
+            class="flex flex-col gap-4 before:block before:w-6 before:h-0.5 before:rounded-full neon-before"
           >
             <h2 class="title text-2xl text-verde-200">Base</h2>
             <p>Rua da Mata, 123 - Floresta Nacional - RJ</p>
           </li>
-
-          <li>
-            <h2>Email</h2>
+          <li
+            class="flex flex-col gap-4 before:block before:w-6 before:h-0.5 before:rounded-full neon-before"
+          >
+            <h2 class="title text-2xl text-verde-200">Email</h2>
             <p>contato@forest.com</p>
           </li>
-
-          <li>
-            <h2>Telefone</h2>
+          <li
+            class="flex flex-col gap-4 before:block before:w-6 before:h-0.5 before:rounded-full neon-before"
+          >
+            <h2 class="title text-2xl text-verde-200">Telefone</h2>
             <p>21 99999-9999</p>
           </li>
         </ul>
       </address>
-      <form action="">
-        <label
+      <form action="" class="mt-6 bg-verde-600 p-4 rounded-xl grid gap-4">
+        <label class="flex flex-col gap-2"
           >Nome
-          <input name="nome" type="text" />
+          <input
+            name="email"
+            type="email"
+            class="bg-verde-500 rounded-lg p-2 border-2 border-transparent focus:outline-none focus:border-verde-300 focus:shadow-[0px_0px_1px_1px] focus:shadow-verde-200"
+          />
         </label>
-        <label
+        <label class="flex flex-col gap-2"
           >Email
-          <input name="email" type="email" />
+          <input
+            name="nome"
+            type="text"
+            class="bg-verde-500 rounded-lg p-2 border-2 border-transparent focus:outline-none focus:border-verde-300 focus:shadow-[0px_0px_1px_1px] focus:shadow-verde-200"
+          />
         </label>
-        <label
+        <label class="flex flex-col gap-2"
           >Telefone
-          <input name="telefone" placeholder="(21) 00000-0000" type="text" />
+          <input
+            name="telefone"
+            type="tel"
+            placeholder="(21) 00000-0000"
+            class="bg-verde-500 rounded-lg p-2 placeholder:text-verde-600 placeholder:text-xl border-2 border-transparent focus:outline-none focus:border-verde-300 focus:shadow-[0px_0px_1px_1px] focus:shadow-verde-200"
+          />
+        </label>
+        <label class="flex flex-col gap-2"
+          >Mensagem
+          <textarea
+            name="mensagem"
+            rows="5"
+            class="bg-verde-500 rounded-lg p-2 border-2 border-transparent focus:outline-none focus:border-verde-300 focus:shadow-[0px_0px_1px_1px] focus:shadow-verde-200"
+          ></textarea>
         </label>
 
-        <label
-          >Mensagem
-          <textarea name="mensagem" rows="5"></textarea>
-        </label>
-        <button>Enviar Email</button>
+        <button class="btn justify-self-start my-1">Enviar Email</button>
       </form>
     </article>
 
