@@ -8,6 +8,15 @@
   }
 } */
 
+@layer utilities {
+  .bg-radial-verde-70 {
+    background-image: radial-gradient(#2e482c, #16281f 70%);
+  }
+  .bg-radial-verde-90 {
+    background-image: radial-gradient(#2e482c, #16281f 80%);
+  }
+}
+
 @layer components {
   .btn {
     @apply min-w-max py-1 px-5 rounded-full text-verde-700 bg-gradient-to-t from-verde-300 via-verde-200 to-verde-100  border border-verde-100 shadow-sm shadow-verde-200/50 hover:contrast-200 hover:cursor-pointer;

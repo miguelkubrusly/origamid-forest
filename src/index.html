@@ -122,7 +122,7 @@
     <!-- acomodacoes -->
     <div
       id="acomodacoes"
-      class="bg-gradient-to-r from-verde-500 via-verde-400 to-verde-500 pt-12 mx-3"
+      class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-2 md:items-end"
     >
       <section
         class="bg-[url(../src/img/padrao.svg)] bg-left bg-contain bg-no-repeat"
@@ -139,7 +139,7 @@
         </ul>
       </section>
       <div
-        class="grid grid-cols-2 gap-4 pb-12 [&>figure]:relative [&>figure>img]:rounded-xl [&>figure>figcaption]:img-caption bg-gradient-to-b from-verde-500/0 to-verde-500"
+        class="grid grid-cols-2 gap-4 pb-12 [&>figure]:relative [&>figure>img]:rounded-xl [&>figure>figcaption]:img-caption"
       >
         <figure class="col-span-2">
           <img
@@ -390,7 +390,10 @@
     </section>
 
     <!-- contato -->
-    <article id="contato" class="mx-3 mb-12">
+    <article
+      id="contato"
+      class="mx-3 mb-12 md:grid md:grid-cols-2 md:items-start"
+    >
       <address class="not-italic text-gray-200">
         <h1 class="title text-verde-200 text-4xl mb-6">Nossos Contatos</h1>
         <p>
@@ -418,7 +421,10 @@
           </li>
         </ul>
       </address>
-      <form action="" class="mt-6 bg-verde-600 p-4 rounded-xl grid gap-4">
+      <form
+        action=""
+        class="mt-6 md:mt-0 bg-verde-600 p-4 rounded-xl grid gap-4"
+      >
         <label class="flex flex-col gap-2"
           >Nome
           <input
@@ -459,49 +465,53 @@
 
     <!-- parceiros -->
     <aside class="mx-3 p-10">
-      <ul class="grid justify-items-center items-center">
-        <li class="p-4 border-b-2 border-verde-600">
+      <ul class="grid justify-items-center items-center md:flex">
+        <li class="p-4 border-b-2 md:border-b-0 md:border-r-2 border-verde-600">
           <img src="./img/parceiros/caravan.svg" alt="Caravan" />
         </li>
-        <li class="border-b-2 border-verde-600 py-4">
+        <li class="border-b-2 md:border-b-0 md:border-r-2 border-verde-600 p-4">
           <img src="./img/parceiros/dogs.svg" alt="Dogs" />
         </li>
-        <li class="py-4 border-b-2 border-verde-600">
+        <li class="p-4 border-b-2 md:border-b-0 md:border-r-2 border-verde-600">
           <img src="./img/parceiros/wildbeast.svg" alt="Wildbeast" />
         </li>
-        <li class="py-4 border-b-2 border-verde-600">
+        <li class="p-4 border-b-2 md:border-b-0 md:border-r-2 border-verde-600">
           <img src="./img/parceiros/lescone.svg" alt="Lescone" />
         </li>
-        <li class="py-4 border-verde-600">
+        <li class="p-4 border-verde-600">
           <img src="./img/parceiros/surfbot.svg" alt="Surfbot" />
         </li>
       </ul>
     </aside>
 
     <footer class="px-3 mt-12 mb-8">
-      <address class="not-italic mb-8 bg-verde-600 p-8 rounded-xl">
-        <dl class="mb-8">
-          <dt class="title text-xl mb-3">Endereço</dt>
-          <dd class="mb-6 text-gray-400">
-            Rua da Mata, 123<br />Floresta Nacional<br />Rio de Janeiro, RJ
-          </dd>
-          <dt class="title text-xl mb-3">Contato</dt>
-          <dd class="mb-6 text-gray-400">
-            contato@foddest.com<br />+55 21 9999-9999
-          </dd>
+      <address
+        class="not-italic mb-8 bg-verde-600 p-8 rounded-xl md:flex md:justify-between"
+      >
+        <dl class="mb-8 md:mb-0 md:flex md:gap-6">
+          <div>
+            <dt class="title text-xl mb-3">Endereço</dt>
+            <dd class="mb-6 text-gray-400">
+              Rua da Mata, 123<br />Floresta Nacional<br />Rio de Janeiro, RJ
+            </dd>
+          </div>
+          <div>
+            <dt class="title text-xl mb-3">Contato</dt>
+            <dd class="mb-6 text-gray-400">
+              contato@foddest.com<br />+55 21 9999-9999
+            </dd>
+          </div>
         </dl>
-        <figure>
+        <aside>
           <img src="./img/forest.svg" alt="Forest" class="mb-2" />
-          <figcaption class="text-gray-400">
-            Conecte-se com a natureza
-          </figcaption>
-        </figure>
+          <p class="text-gray-400">Conecte-se com a natureza</p>
+        </aside>
       </address>
-      <aside>
+      <aside class="text-sm md:flex md:flex-row-reverse md:justify-between">
         <menu class="flex gap-8 text-gray-400 mb-8">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li><a href="#" class="hover:text-verde-200">Instagram</a></li>
+          <li><a href="#" class="hover:text-verde-200">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-verde-200">Facebook</a></li>
         </menu>
         <p class="text-gray-400">
           © 2024 Forest. Todos os direitos reservados.
