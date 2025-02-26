@@ -86,7 +86,7 @@
         autoplay
         muted
         loop
-        class="absolute inset-0 rounded-xl w-full object-cover -z-10"
+        class="absolute inset-0 rounded-xl w-full h-full object-cover -z-10"
       >
         <source src="./img/video_sol.mp4" type="video/mp4" />
       </video>
@@ -279,7 +279,7 @@
         </ul>
       </section>
       <section
-        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bg-[url('./img/padrao.svg')] [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
+        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
       >
         <figure
           class="relative group overflow-hidden after:absolute after:inset-0 after:bg-gradient-to-t after:from-verde-700/80 after:to-verde-700/0 after:transition-opacity after:duration-150 after:hidden hover:after:block"
@@ -287,9 +287,9 @@
           <img
             src="./img/canoagem.jpg"
             alt="canoagem"
-            class="transition-transform duration-150 group-hover:scale-110"
+            class="transition-transform duration-150 group-hover:scale-110 w-full object-cover"
           />
-          <figcaption class="hidden group-hover:block z-10">
+          <figcaption class="text-sm mr-2 hidden group-hover:block z-10">
             Canoagem
           </figcaption>
         </figure>
@@ -300,9 +300,9 @@
           <img
             src="./img/observacao-noturna.jpg"
             alt="Observação Noturna"
-            class="transition-transform duration-150 group-hover:scale-110"
+            class="transition-transform duration-150 group-hover:scale-110 w-full object-cover"
           />
-          <figcaption class="hidden group-hover:block z-10">
+          <figcaption class="text-sm mr-2 hidden group-hover:block z-10">
             Observação Noturna
           </figcaption>
         </figure>
@@ -313,9 +313,9 @@
           <img
             src="./img/vida-selvagem.jpg"
             alt="Vida Selvagem"
-            class="transition-transform duration-150 group-hover:scale-110"
+            class="transition-transform duration-150 group-hover:scale-110 w-full object-cover"
           />
-          <figcaption class="hidden group-hover:block z-10">
+          <figcaption class="text-sm mr-2 hidden group-hover:block z-10">
             Vida Selvagem
           </figcaption>
         </figure>
