@@ -27,10 +27,13 @@
         <p class="rounded-r-md" id="tempo">🌤️</p>
       </div>
 
-      <nav id="menu" class="flex justify-between my-8 max-[360px]:gap-6 px-3">
+      <nav
+        id="menu"
+        class="flex flex-col justify-between md:flex-row my-8 gap-6 px-3"
+      >
         <div class="w-full flex justify-between items-center">
           <a href="./">
-            <img src="./img/forest.svg" alt="Forest" />
+            <img src="./img/forest.svg" alt="Forest" class="w-max[130px]" />
           </a>
           <menu
             class="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-xl [&>*]:relative [&>*]:after:hidden [&>*]:after:w-full [&>*]:after:h-[2px] [&>*]:after:bg-white [&>*]:after:absolute [&>*]:after:-bottom-1 [&>*]:after:left-0"
@@ -57,7 +60,7 @@
             Menu
           </button>
           <menu
-            class="hidden md:hidden text-md px-5 py-3 bg-gradient-to-b from-verde-200 to-verde-300 text-verde-700 border border-verde-100 border-t-0 shadow-sm shadow-verde-200/50 rounded-b-2xl absolute w-[160px] z-10"
+            class="hidden text-md px-5 py-3 bg-gradient-to-b from-verde-200 to-verde-300 text-verde-700 border border-verde-100 border-t-0 shadow-sm shadow-verde-200/50 rounded-b-2xl absolute w-[160px] z-10"
           >
             <li class="hover:font-bold hover:text-white">
               <a href="#acomodacoes">Acomodações</a>
@@ -130,7 +133,7 @@
     <!-- acomodacoes -->
     <div
       id="acomodacoes"
-      class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-2 md:items-end md:gap-12"
+      class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-[auto_1fr] md:items-end md:gap-12"
     >
       <section
         class="bg-[url(../src/img/padrao.svg)] bg-left bg-contain bg-no-repeat md:w-max md:justify-self-end"
@@ -556,6 +559,25 @@
             mobileMenuBtn.classList.toggle(cls)
           );
         });
+      }
+
+      // Randomly decide if it is raining (50% chance)
+      const isRaining = Math.random() < 0.5;
+
+      if (isRaining) {
+        const headerEmoji = document.getElementById("tempo");
+        if (headerEmoji) {
+          headerEmoji.textContent = "🌧️";
+        }
+
+        const videoSource = document.querySelector("main video source");
+        if (videoSource) {
+          videoSource.src = "./img/video_chuva.mp4";
+          const video = videoSource.parentElement;
+          if (video) {
+            video.load();
+          }
+        }
       }
     </script>
   </body>
