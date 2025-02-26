@@ -33,7 +33,7 @@
             <img src="./img/forest.svg" alt="Forest" />
           </a>
           <menu
-            class="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-xl [&>*]:relative [&>*]:after:hidden [&>*]:after:w-full [&>*]:after:h-[1px] [&>*]:after:bg-white [&>*]:after:absolute [&>*]:after:-bottom-1 [&>*]:after:left-0"
+            class="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-xl [&>*]:relative [&>*]:after:hidden [&>*]:after:w-full [&>*]:after:h-[2px] [&>*]:after:bg-white [&>*]:after:absolute [&>*]:after:-bottom-1 [&>*]:after:left-0"
           >
             <li class="hover:after:inline-block">
               <a href="#acomodacoes">Acomodações</a>
@@ -77,8 +77,16 @@
     </header>
 
     <main
-      class="bg-[url('../src/img/floresta.jpg')] bg-center bg-cover bg-no-repeat rounded-xl flex flex-col flex-wrap relative p-8 pt-14 md:pt-56 gap-8 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl max-[400px]:pl-6 mx-3"
+      class="rounded-xl flex flex-col flex-wrap relative p-8 pt-14 md:pt-56 gap-8 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl max-[400px]:pl-6 mx-3"
     >
+      <video
+        autoplay
+        muted
+        loop
+        class="absolute inset-0 rounded-xl h-full object-cover -z-10"
+      >
+        <source src="./img/video_sol.mp4" type="video/mp4" />
+      </video>
       <div
         class="flex gap-6 items-center bg-verde-700/90 self-start p-1 pl-3 -ml-2 rounded-full max-[500px]:flex-col max-[500px]:items-start max-[500px]:gap-2 max-[500px]:rounded-2xl max-[500px]:rounded-b-6xl max-[500px]:bg-verde-700/60 max-[500px]:py-2 max-[500px]:px-4"
       >
@@ -122,10 +130,10 @@
     <!-- acomodacoes -->
     <div
       id="acomodacoes"
-      class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-2 md:items-end"
+      class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-2 md:items-end md:gap-12"
     >
       <section
-        class="bg-[url(../src/img/padrao.svg)] bg-left bg-contain bg-no-repeat"
+        class="bg-[url(../src/img/padrao.svg)] bg-left bg-contain bg-no-repeat md:w-max md:justify-self-end"
       >
         <h1 class="title mb-6">Refúgio Natural</h1>
         <ul
@@ -145,7 +153,7 @@
           <img
             src="./img/casa1.jpg"
             alt="Casa 1"
-            class="max-h-[600px] w-full object-cover object-center"
+            class="max-h-[600px] md:max-h-[300px] w-full object-cover object-center"
           />
           <figcaption>Ruby</figcaption>
         </figure>
@@ -268,7 +276,7 @@
         </ul>
       </section>
       <section
-        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bbg-[url('../src/img/padrao.svg')ottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
+        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bg-[url('../src/img/padrao.svg')] [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
       >
         <figure
           class="relative group overflow-hidden after:absolute after:inset-0 after:bg-gradient-to-t after:from-verde-700/80 after:to-verde-700/0 after:transition-opacity after:duration-150 after:hidden hover:after:block"
@@ -319,7 +327,7 @@
       <h1 class="title text-center mt-2 mb-8">Ritmo da Floresta</h1>
 
       <ol
-        class="flex flex-col gap-4 sm:grid sm:grid-cols-[auto_auto_auto] sm:gap-8 sm:justify-center sm:[&>li]:max-w-[200px]"
+        class="flex flex-col gap-4 sm:grid sm:grid-cols-[auto_auto_auto] sm:gap-8 sm:justify-center sm:[&>li]:max-w-[300px]"
       >
         <li
           class="flex flex-col gap-4 bg-verde-600 p-6 rounded-xl transition-all duration-50 sm:hover:-translate-y-2"
@@ -392,7 +400,7 @@
     <!-- contato -->
     <article
       id="contato"
-      class="mx-3 mb-12 md:grid md:grid-cols-2 md:items-start"
+      class="mx-3 md:mx-12 mb-12 md:grid md:grid-cols-2 md:items-start"
     >
       <address class="not-italic text-gray-200">
         <h1 class="title text-verde-200 text-4xl mb-6">Nossos Contatos</h1>

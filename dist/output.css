@@ -704,8 +704,20 @@ video {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .col-span-2 {
@@ -849,6 +861,11 @@ video {
   width: 100%;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .min-w-\[230px\] {
   min-width: 230px;
 }
@@ -877,6 +894,18 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
+.max-w-\[900px\] {
+  max-width: 900px;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
 }
 
 .grid-cols-2 {
@@ -1079,6 +1108,14 @@ video {
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\.\/src\/img\/video_chuva\.jpg\'\)\] {
+  background-image: url('../src/img/video_chuva.jpg');
+}
+
+.bg-\[url\(\'\.\.\/src\/img\/video_chuva\.mp4\'\)\] {
+  background-image: url('../src/img/video_chuva.mp4');
 }
 
 .from-verde-200 {
@@ -1788,6 +1825,11 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1819,6 +1861,15 @@ video {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:max-h-\[300px\] {
+    max-height: 300px;
+  }
+
+  .md\:w-max {
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .md\:grid-cols-2 {
@@ -1867,6 +1918,10 @@ video {
 
   .md\:gap-12 {
     gap: 3rem;
+  }
+
+  .md\:justify-self-end {
+    justify-self: end;
   }
 
   .md\:border-b-0 {
@@ -1998,6 +2053,11 @@ video {
   height: 1px;
 }
 
+.\[\&\>\*\]\:after\:h-\[2px\]>*::after {
+  content: var(--tw-content);
+  height: 2px;
+}
+
 .\[\&\>\*\]\:after\:w-full>*::after {
   content: var(--tw-content);
   width: 100%;
@@ -2015,6 +2075,14 @@ video {
 
 .\[\&\>figure\>figcaption\]\:left-4>figure>figcaption {
   left: 1rem;
+}
+
+.\[\&\>figure\>figcaption\]\:bottom-4>figure>figcaption {
+  bottom: 1rem;
+}
+
+.\[\&\>figure\>figcaption\]\:bg-\[url\(\'\.\.\/src\/img\/padrao\.svg\'\)\]>figure>figcaption {
+  background-image: url('../src/img/padrao.svg');
 }
 
 .\[\&\>figure\>figcaption\]\:text-lg>figure>figcaption {
@@ -2046,5 +2114,9 @@ video {
 @media (min-width: 640px) {
   .sm\:\[\&\>li\]\:max-w-\[200px\]>li {
     max-width: 200px;
+  }
+
+  .sm\:\[\&\>li\]\:max-w-\[300px\]>li {
+    max-width: 300px;
   }
 }
