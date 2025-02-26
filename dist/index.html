@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
     <title>Forest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap"
       rel="stylesheet"
     />
-    <link href="./dist/output.css" rel="stylesheet" type="text/css" />
+    <link href="./output.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="container max-w-[1350px] bg-verde-500 text-white">
     <header>
@@ -33,7 +33,7 @@
       >
         <div class="w-full flex justify-between items-center">
           <a href="./">
-            <img src="./img/forest.svg" alt="Forest" class="w-max[130px]" />
+            <img src="./img/forest.svg" alt="Forest" class="w-max-[130px]" />
           </a>
           <menu
             class="hidden md:flex gap-4 lg:gap-6 text-lg lg:text-xl [&>*]:relative [&>*]:after:hidden [&>*]:after:w-full [&>*]:after:h-[2px] [&>*]:after:bg-white [&>*]:after:absolute [&>*]:after:-bottom-1 [&>*]:after:left-0"
@@ -55,7 +55,7 @@
         <div class="relative">
           <button
             id="mobile-button"
-            class="btn flex md:hidden gap-4 justify-between items-center after:w-4 after:h-6 after:bg-[url('../img/menu.svg')] after:bg-center after:bg-no-repeat"
+            class="btn flex md:hidden gap-4 justify-between items-center after:w-4 after:h-6 after:bg-[url('./img/menu.svg')] after:bg-center after:bg-no-repeat"
           >
             Menu
           </button>
@@ -80,13 +80,13 @@
     </header>
 
     <main
-      class="rounded-xl flex flex-col flex-wrap relative p-8 pt-14 md:pt-56 gap-8 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl max-[400px]:pl-6 mx-3"
+      class="overflow-hidden rounded-xl flex flex-col flex-wrap relative p-8 pt-14 md:pt-56 gap-8 before:bg-gradient-to-t from-verde-700/70 to-verde-700/0 before:absolute before:inset-0 before:rounded-xl max-[400px]:pl-6 mx-3"
     >
       <video
         autoplay
         muted
         loop
-        class="absolute inset-0 rounded-xl h-full object-cover -z-10"
+        class="absolute inset-0 rounded-xl w-full object-cover -z-10"
       >
         <source src="./img/video_sol.mp4" type="video/mp4" />
       </video>
@@ -96,7 +96,7 @@
         <p class="max-[500px]:font-semibold">vagas para dezembro abertas</p>
         <a
           href="#contato"
-          class="btn max-w-max flex items-center justify-between relative after:bg-[url('../img/seta.svg')] after:bg-center after:bg-no-repeat after:w-6 after:h-6 after:inline-block"
+          class="btn max-w-max flex items-center justify-between relative after:bg-[url('./img/seta.svg')] after:bg-center after:bg-no-repeat after:w-6 after:h-6 after:inline-block"
         >
           Reserve Hoje
         </a>
@@ -136,7 +136,7 @@
       class="md:bg-radial-verde-80 bg-radial-verde-90 pt-12 mx-3 md:grid md:grid-cols-[auto_1fr] md:items-end md:gap-12"
     >
       <section
-        class="bg-[url(../img/padrao.svg)] bg-left bg-contain bg-no-repeat md:w-max md:justify-self-end"
+        class="bg-[url(./img/padrao.svg)] bg-left bg-contain bg-no-repeat md:w-max md:justify-self-end"
       >
         <h1 class="title mb-6">Refúgio Natural</h1>
         <ul
@@ -279,7 +279,7 @@
         </ul>
       </section>
       <section
-        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bg-[url('../img/padrao.svg')] [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
+        class="grid grid-cols-2 grid-rows-2 gap-4 [&>figure]:rounded-xl [&>figure>img]:h-full [&>figure>img]:object-cover [&>figure>figcaption]:absolute [&>figure>figcaption]:bg-[url('./img/padrao.svg')] [&>figure>figcaption]:bottom-4 [&>figure>figcaption]:left-4 [&>figure>figcaption]:text-lg"
       >
         <figure
           class="relative group overflow-hidden after:absolute after:inset-0 after:bg-gradient-to-t after:from-verde-700/80 after:to-verde-700/0 after:transition-opacity after:duration-150 after:hidden hover:after:block"
@@ -324,7 +324,7 @@
 
     <!-- ciclo natural -->
     <section
-      class="mx-3 mb-12 sm:bg-[url(../img/padrao.svg)] sm:bg-center sm:bg-contain sm:bg-no-repeat sm:py-20"
+      class="mx-3 mb-12 sm:bg-[url(./img/padrao.svg)] sm:bg-center sm:bg-contain sm:bg-no-repeat sm:py-20"
     >
       <h2 class="subtitle text-center">Ciclo Natural</h2>
       <h1 class="title text-center mt-2 mb-8">Ritmo da Floresta</h1>
@@ -403,7 +403,7 @@
     <!-- contato -->
     <article
       id="contato"
-      class="mx-3 md:mx-12 mb-12 md:grid md:grid-cols-2 md:items-start"
+      class="mx-3 md:mx-12 mb-12 md:grid md:grid-cols-2 md:gap-8 md:items-start"
     >
       <address class="not-italic text-gray-200">
         <h1 class="title text-verde-200 text-4xl mb-6">Nossos Contatos</h1>

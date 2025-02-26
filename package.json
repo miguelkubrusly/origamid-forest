@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bun run tailwindcss -i src/input.css -o src/dist/output.css --watch --minify"
+    "dev": "bun run tailwindcss -i src/input.css -o dist/output.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
